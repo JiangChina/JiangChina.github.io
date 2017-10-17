@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        wo｜JiangChina blog
+        struts基础使用方法｜JiangChina blog
         
     </title>
 
-    <link rel="canonical" href="http://haojen.github.io/2017/10/03/wo/">
+    <link rel="canonical" href="http://haojen.github.io/2017/10/17/struts基础使用方法/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -145,12 +145,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>wo</h1>
+                    <h1>struts基础使用方法</h1>
                     
                     <span class="meta">
                          作者 Js
                         <span>
-                          日期 2017-10-03
+                          日期 2017-10-17
                          </span>
                     </span>
                     <div class="tags text-center">
@@ -162,7 +162,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            wo
+            struts基础使用方法
         </span>
     </div>
 </header>
@@ -173,16 +173,26 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                
+                <h3 id="一-项目说明"><a href="#一-项目说明" class="headerlink" title="一. 项目说明"></a>一. 项目说明</h3><p>&emsp;&emsp;从开始界面点击链接跳转到另一个页面并显示“Hello World！！！”</p>
+<h3 id="二-struts2-5版本使用到的基础jar包"><a href="#二-struts2-5版本使用到的基础jar包" class="headerlink" title="二. struts2.5版本使用到的基础jar包"></a>二. struts2.5版本使用到的基础jar包</h3><p>&emsp;&emsp;jar包存放在struts安装目录\lib下, 使用之前需要先将这些jar包导入到项目, 如果是动态web项目一般将jar包放在<strong>WebContent/WEB-INF/lib</strong>下:<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">asm-5.2.jar</div><div class="line">asm-commons-5.2.jar</div><div class="line">asm-tree-5.2.jar</div><div class="line">commons-fileupload-1.3.3.jar</div><div class="line">commons-io-2.5.jar</div><div class="line">commons-lang-2.4.jar</div><div class="line">commons-lang3-3.6.jar</div><div class="line">freemarker-2.3.23.jar</div><div class="line">javassist-3.20.0-GA.jar</div><div class="line">log4j-api-2.8.2.jar</div><div class="line">ognl-3.1.15.jar</div><div class="line">struts2-core-2.5.13.jar</div></pre></td></tr></table></figure></p>
+<h3 id="三-需要配置的文件"><a href="#三-需要配置的文件" class="headerlink" title="三. 需要配置的文件"></a>三. 需要配置的文件</h3><ol>
+<li>web.xml&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;配置Filter及Web页面列表</li>
+<li>struts.xml&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;配置Action和对应请求关系</li>
+<li>struts.properties&emsp;&emsp;&emsp;配置Web页面默认编码格式</li>
+<li>index.jsp&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;链接所在页面</li>
+<li>success.jsp&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;跳转页面</li>
+<li>HelloAction.java&emsp;&emsp;&emsp;&ensp;Action处理程序     </li>
+</ol>
+<h3 id="四-文件详细解释"><a href="#四-文件详细解释" class="headerlink" title="四. 文件详细解释"></a>四. 文件详细解释</h3><p>web.xml<br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/web.jpg" alt="web.xml"><br>7行:<br><code>&lt;filter-name&gt;Struts2&lt;/filter-name&gt;</code><br>过滤器名字</p>
+<p>8行:<br><code>&lt;filter-class&gt;org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter&lt;/filter-class&gt;</code><br>指定过滤器,不同版本的struts2路径会不一样</p>
+<p>12行:<br><code>&lt;url-pattern&gt;/*&lt;/url-pattern&gt;</code><br>设置需要过滤的请求网址格式, /*表示过滤所有请求</p>
+<p>15行:<br><code>&lt;welcome-file&gt;index.jsp&lt;/welcome-file&gt;</code><br>Web程序的第一个页面, 可以有多个页面, 先找到哪个页面就使用这个页面作为首页</p>
+<p>struts.xml<br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/struts.jpg" alt="struts.xml"><br>struts.properties<br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/strutsproperties.jpg" alt="struts.properties"><br>index.jsp<br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/index.jpg" alt="index.jsp"><br>success.jsp<br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/success.jpg" alt="success.jsp"><br>HelloAction.java<br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/HelloAction.jpg" alt="HelloAction.java"></p>
+
                 <hr>
                 
 
                 <ul class="pager">
-                    
-                    <li class="previous">
-                        <a href="/2017/10/03/jj/" data-toggle="tooltip" data-placement="top"
-                           title="jj">&larr; Previous Post</a>
-                    </li>
                     
                     
                 </ul>
@@ -198,7 +208,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一-项目说明"><span class="toc-text">一. 项目说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二-struts2-5版本使用到的基础jar包"><span class="toc-text">二. struts2.5版本使用到的基础jar包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三-需要配置的文件"><span class="toc-text">三. 需要配置的文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四-文件详细解释"><span class="toc-text">四. 文件详细解释</span></a></li></ol>
                 </div>
             </div>
         </div>
