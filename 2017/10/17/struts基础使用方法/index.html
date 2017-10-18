@@ -173,9 +173,11 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h3 id="一-项目说明"><a href="#一-项目说明" class="headerlink" title="一. 项目说明"></a>一. 项目说明</h3><p>&emsp;&emsp;从开始界面点击链接跳转到另一个页面并显示“Hello World！！！”</p>
-<h3 id="二-struts2-5版本使用到的基础jar包"><a href="#二-struts2-5版本使用到的基础jar包" class="headerlink" title="二. struts2.5版本使用到的基础jar包"></a>二. struts2.5版本使用到的基础jar包</h3><p>&emsp;&emsp;jar包存放在struts安装目录\lib下, 使用之前需要先将这些jar包导入到项目, 如果是动态web项目一般将jar包放在<strong>WebContent/WEB-INF/lib</strong>下:<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">asm-5.2.jar</div><div class="line">asm-commons-5.2.jar</div><div class="line">asm-tree-5.2.jar</div><div class="line">commons-fileupload-1.3.3.jar</div><div class="line">commons-io-2.5.jar</div><div class="line">commons-lang-2.4.jar</div><div class="line">commons-lang3-3.6.jar</div><div class="line">freemarker-2.3.23.jar</div><div class="line">javassist-3.20.0-GA.jar</div><div class="line">log4j-api-2.8.2.jar</div><div class="line">ognl-3.1.15.jar</div><div class="line">struts2-core-2.5.13.jar</div></pre></td></tr></table></figure></p>
-<h3 id="三-需要配置的文件"><a href="#三-需要配置的文件" class="headerlink" title="三. 需要配置的文件"></a>三. 需要配置的文件</h3><ol>
+                <h3 id="一-struts2说明"><a href="#一-struts2说明" class="headerlink" title="一. struts2说明"></a>一. struts2说明</h3><p>&emsp;&emsp;<strong>MVC(Model View Controller, 模型 - 视图 - 控制器)</strong>框架将应用系统的输入、处理、输出, 按照Model、View、Controller三部分进行分离，划分成模型层、视图层、控制层。三层之间以最少的耦合来协同工作，从而提高了应用系统的可扩展性和可维护性。而struts2就是一个基于MVC设计的框架。</p>
+<h3 id="二-项目说明"><a href="#二-项目说明" class="headerlink" title="二. 项目说明"></a>二. 项目说明</h3><p>&emsp;&emsp;从开始界面点击链接跳转到另一个页面并显示“Hello World！！！”<br><strong>项目结构:</strong><br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/project.jpg" alt="文件结构"></p>
+<p><strong>显示页面</strong><br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/index结果.jpg" alt="index"><br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/success结果.jpg" alt="success"></p>
+<h3 id="三-struts2-5版本使用到的基础jar包"><a href="#三-struts2-5版本使用到的基础jar包" class="headerlink" title="三. struts2.5版本使用到的基础jar包"></a>三. struts2.5版本使用到的基础jar包</h3><p>&emsp;&emsp;jar包存放在struts安装目录\lib下, 使用之前需要先将这些jar包导入到项目, 如果是动态web项目一般将jar包放在<strong>WebContent/WEB-INF/lib</strong>下:<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">asm-5.2.jar</div><div class="line">asm-commons-5.2.jar</div><div class="line">asm-tree-5.2.jar</div><div class="line">commons-fileupload-1.3.3.jar</div><div class="line">commons-io-2.5.jar</div><div class="line">commons-lang-2.4.jar</div><div class="line">commons-lang3-3.6.jar</div><div class="line">freemarker-2.3.23.jar</div><div class="line">javassist-3.20.0-GA.jar</div><div class="line">log4j-api-2.8.2.jar</div><div class="line">ognl-3.1.15.jar</div><div class="line">struts2-core-2.5.13.jar</div></pre></td></tr></table></figure></p>
+<h3 id="四-需要配置的文件"><a href="#四-需要配置的文件" class="headerlink" title="四. 需要配置的文件"></a>四. 需要配置的文件</h3><ol>
 <li>web.xml&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;配置Filter及Web页面列表</li>
 <li>struts.xml&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;配置Action和对应请求关系</li>
 <li>struts.properties&emsp;&emsp;&emsp;配置Web页面默认编码格式</li>
@@ -183,11 +185,17 @@
 <li>success.jsp&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;跳转页面</li>
 <li>HelloAction.java&emsp;&emsp;&emsp;&ensp;Action处理程序     </li>
 </ol>
-<h3 id="四-文件详细解释"><a href="#四-文件详细解释" class="headerlink" title="四. 文件详细解释"></a>四. 文件详细解释</h3><p>web.xml<br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/web.jpg" alt="web.xml"><br>7行:<br><code>&lt;filter-name&gt;Struts2&lt;/filter-name&gt;</code><br>过滤器名字</p>
+<h3 id="五-文件详细解释"><a href="#五-文件详细解释" class="headerlink" title="五. 文件详细解释"></a>五. 文件详细解释</h3><p><strong>web.xml文件</strong><br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/web.jpg" alt="web.xml"><br>7行:<br><code>&lt;filter-name&gt;Struts2&lt;/filter-name&gt;</code><br>过滤器名字</p>
 <p>8行:<br><code>&lt;filter-class&gt;org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter&lt;/filter-class&gt;</code><br>指定过滤器,不同版本的struts2路径会不一样</p>
 <p>12行:<br><code>&lt;url-pattern&gt;/*&lt;/url-pattern&gt;</code><br>设置需要过滤的请求网址格式, /*表示过滤所有请求</p>
 <p>15行:<br><code>&lt;welcome-file&gt;index.jsp&lt;/welcome-file&gt;</code><br>Web程序的第一个页面, 可以有多个页面, 先找到哪个页面就使用这个页面作为首页</p>
-<p>struts.xml<br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/struts.jpg" alt="struts.xml"><br>struts.properties<br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/strutsproperties.jpg" alt="struts.properties"><br>index.jsp<br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/index.jpg" alt="index.jsp"><br>success.jsp<br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/success.jpg" alt="success.jsp"><br>HelloAction.java<br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/HelloAction.jpg" alt="HelloAction.java"></p>
+<p><strong>struts.xml文件</strong><br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/struts.jpg" alt="struts.xml"><br>6行:<br><code>&lt;package name=&quot;default&quot; namespace=&quot;/&quot; extends=&quot;struts-default&quot;&gt;</code><br>package标签设置包的相关属性<br>name:包名&emsp;&emsp;&emsp;namespace:设置包的命名空间&emsp;&emsp;&emsp;extends:继承自哪一个包</p>
+<p>7行:<br><code>&lt;action name=&quot;hello&quot; class=&quot;com.action.HelloAction&quot;&gt;</code><br>name:请求的Action名称&emsp;&emsp;&emsp;class:Action处理类路径</p>
+<p>8行:<br><code>&lt;result&gt;success.jsp&lt;/result&gt;</code><br>设置Action的映射显示页面</p>
+<p><strong>struts.properties文件</strong><br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/strutsproperties.jpg" alt="struts.properties"><br><code>&lt;struts.il8n.encoding value=&quot;UTF-8&quot;/&gt;</code><br>1行:<br>设置struts的编码, 防止中文乱码</p>
+<p><strong>index.jsp文件</strong><br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/index.jpg" alt="index.jsp"><br>12行:<br><code>&lt;s:a action=&quot;hello&quot;&gt;hello&lt;/s:a&gt;</code><br>设置名为hello的超链接, action属性的值是action的名字, 对应struts.xml文件中第七行. <code>&lt;s:a&gt;</code>标签是struts2提供的标签使用前需要先引入标签<code>&lt;%@ taglib uri=&quot;/struts-tags&quot; prefix=&quot;s&quot;%&gt;</code>(第3行)</p>
+<p><strong>success.jsp文件</strong><br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/success.jpg" alt="success.jsp"><br>12行:<br><code>&lt;s:property value=&quot;helo&quot;/&gt;</code><br>获取Action栈顶对象的helo属性值并显示在页面上</p>
+<p><strong>HelloAction.java文件</strong><br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/HelloAction.jpg" alt="HelloAction.java"><br>这个类继承了Actionsupport类,该类提供了很多实用的方法, execute()就是Actionsupport提供的其中一个方法, 如果没有定义method属性(struts.xml文件中的<code>&lt;action&gt;</code>标签属性, 该属性可以指定Action访问的方法名), 那么会默认调用该方法, 方法返回一个Actionsupport中的常量SUCCESS.</p>
 
                 <hr>
                 
@@ -208,7 +216,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一-项目说明"><span class="toc-text">一. 项目说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二-struts2-5版本使用到的基础jar包"><span class="toc-text">二. struts2.5版本使用到的基础jar包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三-需要配置的文件"><span class="toc-text">三. 需要配置的文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四-文件详细解释"><span class="toc-text">四. 文件详细解释</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一-struts2说明"><span class="toc-text">一. struts2说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二-项目说明"><span class="toc-text">二. 项目说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三-struts2-5版本使用到的基础jar包"><span class="toc-text">三. struts2.5版本使用到的基础jar包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四-需要配置的文件"><span class="toc-text">四. 需要配置的文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五-文件详细解释"><span class="toc-text">五. 文件详细解释</span></a></li></ol>
                 </div>
             </div>
         </div>
