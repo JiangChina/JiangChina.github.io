@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Js的个人博客">
+    <meta name="keyword" content="">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="Jsheng" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        Java基础：io流｜JiangChina blog
+        
+    </title>
+
+    <link rel="canonical" href="http://haojen.github.io/2018/02/08/Java基础：io流/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('//o7bkkhiex.bkt.clouddn.com/lion-blur-bg.jpg')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    Jsheng
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+                        
+							
+                        <li>
+                            <a href="/About/">About</a>
+                        </li>
+							
+						
+                    
+                        
+							
+                        <li>
+                            <a href="/Tags/">Tags</a>
+                        </li>
+							
+						
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="http://ovpkl5u9l.bkt.clouddn.com/Java/Java%E5%9F%BA%E7%A1%80%EF%BC%9Aio%E6%B5%81/title.jpg">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('http://ovpkl5u9l.bkt.clouddn.com/Java/Java%E5%9F%BA%E7%A1%80%EF%BC%9Aio%E6%B5%81/title.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>Java基础：io流</h1>
+                    
+                    <h2 class="subheading">字节流与字符流</h2>
+                    
+                    <span class="meta">
+                         作者 Js
+                        <span>
+                          日期 2018-02-08
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#Java"
+                           title="Java">Java</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            Java基础：io流
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <h3 id="一、io流概述"><a href="#一、io流概述" class="headerlink" title="一、io流概述"></a>一、io流概述</h3><p>&emsp;&emsp;Java中对数据操作都是用流来表示，用于操作流的类都存放在java.io包中。io流分为字节流和字符流两种，字节流可以操作任务文件，字符流只可以操作纯文本文件。io流的流向可以分为输入流和输出流，输入流用于向程序输入数据，输出流用于向文件输出数据。</p>
+<h3 id="二、字节流"><a href="#二、字节流" class="headerlink" title="二、字节流"></a>二、字节流</h3><p>&emsp;&emsp;字节流的抽象父类：InputStream和OutputStream，字节流都派生与这两个抽象类。InputStream是输入流，OutputStream是输出流。<br>类结构<br><img src="http://ovpkl5u9l.bkt.clouddn.com/Java/Java%E5%9F%BA%E7%A1%80%EF%BC%9Aio%E6%B5%81/io%E6%B5%81%E5%B1%82%E7%BA%A7%E7%BB%93%E6%9E%84.jpg" alt="io流层级结构"></p>
+<p>1、常用子类</p>
+<ul>
+<li>FileInputStream - FileOutputStream<br>&emsp;&emsp;重写了父类方法，提供文件的读写功能。</li>
+<li>BufferedInputStream - BufferedOutputStream<br>&emsp;&emsp;带有缓冲区的子类，能提高文件读写效率。</li>
+</ul>
+<p>2、案例</p>
+<ul>
+<li><p>拷贝文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> * 拷贝文件</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo5</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException</span>&#123;</div><div class="line">		<span class="comment">/*</span></div><div class="line"><span class="comment">		 * 构造函数传入一个File对象或者String对象。</span></div><div class="line"><span class="comment">		 */</span></div><div class="line">		FileInputStream fis = <span class="keyword">new</span> FileInputStream(<span class="string">"io\\a.txt"</span>);</div><div class="line">		FileOutputStream fos = <span class="keyword">new</span> FileOutputStream(<span class="string">"io\\copy.txt"</span>);</div><div class="line">		</div><div class="line">		<span class="keyword">int</span> len = <span class="number">0</span>;</div><div class="line">		<span class="comment">/*</span></div><div class="line"><span class="comment">		 * fis.read()可以读取一个字节数据并转成int型，文件结束返回-1</span></div><div class="line"><span class="comment">		 * fos.write(len)会将读取到的数据写入到文件copy.txt里。</span></div><div class="line"><span class="comment">		 */</span></div><div class="line">		<span class="keyword">while</span>((len = fis.read()) != -<span class="number">1</span>)&#123;</div><div class="line">			fos.write(len);</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		<span class="comment">/*</span></div><div class="line"><span class="comment">		 * 关闭流对象，可以节省内存</span></div><div class="line"><span class="comment">		 */</span></div><div class="line">		fis.close();</div><div class="line">		fos.close();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用带缓冲区的字节流拷贝文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">FileInputStream fis = <span class="keyword">new</span> FileInputStream(<span class="string">"io\\a.txt"</span>);</div><div class="line">FileOutputStream fos = <span class="keyword">new</span> FileOutputStream(<span class="string">"io\\b.txt"</span>);</div><div class="line">		</div><div class="line">BufferedInputStream bis = <span class="keyword">new</span> BufferedInputStream(fis);</div><div class="line">BufferedOutputStream bos = <span class="keyword">new</span> BufferedOutputStream(fos);</div><div class="line">		</div><div class="line"><span class="keyword">int</span> len;</div><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> * bis.read()可以将缓冲区装满后再写入文件中</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">while</span>((len = bis.read()) != -<span class="number">1</span>)&#123;</div><div class="line">	bos.write(len);</div><div class="line">&#125;</div><div class="line">		</div><div class="line">bis.close();</div><div class="line">bos.close();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="三、字符流"><a href="#三、字符流" class="headerlink" title="三、字符流"></a>三、字符流</h3><p>&emsp;&emsp;字符流是针对纯文本进行操作的类。Reader和Writer是字符流顶级抽象父类，Reader用于读，Writer用于写。</p>
+<p>1、常用子类</p>
+<ul>
+<li>FileReader - FileWriter<br>&emsp;&emsp;字符流本质就是字节流加上编码集，该类在使用时会默认使用平台字符集对数据进行加工。</li>
+<li>BufferedReader - BufferedWriter<br>&emsp;&emsp;对FileReader进行包装，加上缓冲区。</li>
+<li>InputStreamReader - OutputStreamWriter<br>&emsp;&emsp;可以指定编码集进行加工。</li>
+</ul>
+<p>2、案例</p>
+<ul>
+<li><p>字符流复制文本文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">FileReader fr = <span class="keyword">new</span> FileReader(<span class="string">"io\\a.txt"</span>);</div><div class="line">FileWriter fw = <span class="keyword">new</span> FileWriter(<span class="string">"io\\b.txt"</span>);</div><div class="line">		</div><div class="line"><span class="keyword">int</span> ch;</div><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> * 字符流可以自动区分符号、数字、字母、中文，不会出现乱码现象</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">while</span>((ch = fr.read()) != -<span class="number">1</span>)&#123;</div><div class="line">	fw.write(ch);</div><div class="line">&#125;</div><div class="line">		</div><div class="line">fr.close();</div><div class="line">fw.close();</div></pre></td></tr></table></figure>
+</li>
+<li><p>带缓冲区字符流复制文件，在只拷贝的情况下，字节流拷贝文本文件比字符流快一点。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">FileReader fr = <span class="keyword">new</span> FileReader(<span class="string">"io\\a.txt"</span>);</div><div class="line">FileWriter fw = <span class="keyword">new</span> FileWriter(<span class="string">"io\\c.txt"</span>);</div><div class="line">		</div><div class="line">BufferedReader br = <span class="keyword">new</span> BufferedReader(fr);	<span class="comment">//装饰者模式</span></div><div class="line">BufferedWriter bw = <span class="keyword">new</span> BufferedWriter(fw);</div><div class="line">		</div><div class="line">String s;</div><div class="line"><span class="keyword">while</span>((s = br.readLine()) != <span class="keyword">null</span>)&#123;		<span class="comment">//readLine()读取一行,文件结束返回null</span></div><div class="line">	bw.write(s);</div><div class="line">	bw.newLine();						<span class="comment">//跨平台的换行</span></div><div class="line">&#125;</div><div class="line">		</div><div class="line">br.close();</div><div class="line">bw.close();</div></pre></td></tr></table></figure>
+</li>
+<li><p>自定义编码集复制文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> * 在构造时写入想要使用的编码集名字，就可以使用对应编码集，在读入的时候文件编码集是什么就要写成什么，不然会乱码</span></div><div class="line"><span class="comment"> * 在这里qq.txt的编码集是UTF-16所以我使用UTF-16</span></div><div class="line"><span class="comment"> * 使用这种方式字节流与字符流进行了转换</span></div><div class="line"><span class="comment">*/</span></div><div class="line">InputStreamReader isr = <span class="keyword">new</span> InputStreamReader(<span class="keyword">new</span> FileInputStream(<span class="string">"io\\qq.txt"</span>),<span class="string">"UTF-16"</span>);</div><div class="line">OutputStreamWriter osw = <span class="keyword">new</span> OutputStreamWriter(<span class="keyword">new</span> FileOutputStream(<span class="string">"io\\qqq.txt"</span>),<span class="string">"GBK"</span>);</div><div class="line">		</div><div class="line"><span class="keyword">int</span> ch;</div><div class="line"><span class="keyword">while</span>((ch = isr.read()) != -<span class="number">1</span>)&#123;</div><div class="line">	osw.write(ch);</div><div class="line">&#125;</div><div class="line">		</div><div class="line">isr.close();</div><div class="line">osw.close();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="四、其它"><a href="#四、其它" class="headerlink" title="四、其它"></a>四、其它</h3><ul>
+<li>flush()与close()区别<br>&emsp;&emsp;flush()方法用来刷新缓冲区，使缓冲区中内容写入到文件中，刷新后流还可以继续写。close()方法用来关闭流，但关闭流之前会刷新一次缓冲区，刷新后流不能继续写入。</li>
+<li>io流的异常处理<br>&emsp;&emsp;jdk1.6及以前处理方式<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">FileInputStream fis = <span class="keyword">null</span>;</div><div class="line">FileOutputStream fos = <span class="keyword">null</span>;</div><div class="line"><span class="keyword">try</span> &#123;</div><div class="line">	fis = <span class="keyword">new</span> FileInputStream(<span class="string">"aaa.txt"</span>);</div><div class="line">	fos = <span class="keyword">new</span> FileOutputStream(<span class="string">"bbb.txt"</span>);</div><div class="line">	<span class="keyword">int</span> b;</div><div class="line">	<span class="keyword">while</span>((b = fis.read()) != -<span class="number">1</span>) &#123;</div><div class="line">		fos.write(b);</div><div class="line">	&#125;</div><div class="line">&#125; <span class="keyword">finally</span> &#123;</div><div class="line">	<span class="comment">/*</span></div><div class="line"><span class="comment">	 * 再加一层try&#123;&#125;的原因是保证就算一个流出现异常，另一个流也能关闭</span></div><div class="line"><span class="comment">	*/</span></div><div class="line">	<span class="keyword">try</span> &#123;</div><div class="line">		<span class="keyword">if</span>(fis != <span class="keyword">null</span>)</div><div class="line">		fis.close();</div><div class="line">	&#125;<span class="keyword">finally</span> &#123;</div><div class="line">		<span class="keyword">if</span>(fos != <span class="keyword">null</span>)</div><div class="line">			fos.close();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>&emsp;&emsp;jdk1.7以后处理方式<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> *这个版本会自动关闭在括号中创建的流对象</span></div><div class="line"><span class="comment">*/</span></div><div class="line"><span class="keyword">try</span>(</div><div class="line">	FileInputStream fis = <span class="keyword">new</span> FileInputStream(<span class="string">"aaa.txt"</span>);</div><div class="line">	FileOutputStream fos = <span class="keyword">new</span> FileOutputStream(<span class="string">"bbb.txt"</span>);</div><div class="line">)&#123;</div><div class="line">	<span class="keyword">int</span> b;</div><div class="line">	<span class="keyword">while</span>((b = fis.read()) != -<span class="number">1</span>) &#123;</div><div class="line">		fos.write(b);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2018/02/03/Struts2数据封装/" data-toggle="tooltip" data-placement="top"
+                           title="Struts2数据封装">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+
+                <!--加入新的评论系统-->
+                
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="MTAyMC8zMjc2OS85MzMw">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
+
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
+                
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、io流概述"><span class="toc-text">一、io流概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、字节流"><span class="toc-text">二、字节流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、字符流"><span class="toc-text">三、字符流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、其它"><span class="toc-text">四、其它</span></a></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#Java"
+                           title="Java">Java</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/JiangChina">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Jsheng 2018
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://haojen.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    var _baId = 'c297beccec090a8ef3df26bdd6f825f1';
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?" + _baId;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="http://ovpkl5u9l.bkt.clouddn.com/Profilepicture.jpg">
+</body>
+
+</html>
