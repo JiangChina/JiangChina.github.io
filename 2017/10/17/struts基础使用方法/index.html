@@ -211,7 +211,7 @@
 <p><strong>index.jsp文件</strong><br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/index.jpg" alt="index.jsp"><br>12行:<br><code>&lt;s:a action=&quot;hello&quot;&gt;hello&lt;/s:a&gt;</code><br>设置名为hello的超链接, action属性的值是action的名字, 对应struts.xml文件中第七行. <code>&lt;s:a&gt;</code>标签是struts2提供的标签使用前需要先引入标签<code>&lt;%@ taglib uri=&quot;/struts-tags&quot; prefix=&quot;s&quot;%&gt;</code>(第3行)</p>
 <p><strong>success.jsp文件</strong><br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/success.jpg" alt="success.jsp"><br>12行:<br><code>&lt;s:property value=&quot;helo&quot;/&gt;</code><br>获取Action栈顶对象的helo属性值并显示在页面上</p>
 <p><strong>HelloAction.java文件</strong><br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/HelloAction.jpg" alt="HelloAction.java"><br>这个类继承了Actionsupport类,该类提供了很多实用的方法, execute()就是Actionsupport提供的其中一个方法, 如果没有定义method属性(struts.xml文件中的<code>&lt;action&gt;</code>标签属性, 该属性可以指定Action访问的方法名), 那么会默认调用该方法, 方法返回一个Actionsupport中的常量SUCCESS.</p>
-<h3 id="执行过程"><a href="#执行过程" class="headerlink" title="执行过程"></a>执行过程</h3><p>&emsp;从index页面点击超链接，web.xml中的Struts2过滤器会拦截该请求。到struts.xml中匹配相应action，转到对应处理类中，处理完返回一个String类型变量到struts.xml中匹配对于页面显示结果。</p>
+<h3 id="六、执行过程"><a href="#六、执行过程" class="headerlink" title="六、执行过程"></a>六、执行过程</h3><p>&emsp;从index页面点击超链接，web.xml中的Struts2过滤器会拦截该请求。到struts.xml中匹配相应action，转到对应处理类中，处理完返回一个String类型变量到struts.xml中匹配对于页面显示结果。</p>
 
                 <hr>
                 
@@ -256,7 +256,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一-struts2说明"><span class="toc-text">一. struts2说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二-项目说明"><span class="toc-text">二. 项目说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三-struts2-5版本使用到的基础jar包"><span class="toc-text">三. struts2.5版本使用到的基础jar包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四-需要配置的文件"><span class="toc-text">四. 需要配置的文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五-文件详细解释"><span class="toc-text">五. 文件详细解释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#执行过程"><span class="toc-text">执行过程</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一-struts2说明"><span class="toc-text">一. struts2说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二-项目说明"><span class="toc-text">二. 项目说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三-struts2-5版本使用到的基础jar包"><span class="toc-text">三. struts2.5版本使用到的基础jar包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四-需要配置的文件"><span class="toc-text">四. 需要配置的文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五-文件详细解释"><span class="toc-text">五. 文件详细解释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六、执行过程"><span class="toc-text">六、执行过程</span></a></li></ol>
                 </div>
             </div>
         </div>
