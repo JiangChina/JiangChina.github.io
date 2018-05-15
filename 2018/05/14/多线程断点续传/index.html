@@ -80,7 +80,7 @@
                         
 							
                         <li>
-                            <a href="/Tags/">Tags</a>
+                            <a href="/About/">About</a>
                         </li>
 							
 						
@@ -88,7 +88,7 @@
                         
 							
                         <li>
-                            <a href="/About/">About</a>
+                            <a href="/Tags/">Tags</a>
                         </li>
 							
 						
@@ -160,7 +160,7 @@
                         <span>
                           日期: 2018-05-14
                          </span>
-                         <span>字数: 2,307</span>
+                         <span>字数: 2,310</span>
                         <span class="post-count"> 阅读时长: 10 分钟</span>
                     </span>
                     <div class="tags text-center">
@@ -187,8 +187,9 @@
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
                 <h1 id="一、项目说明"><a href="#一、项目说明" class="headerlink" title="一、项目说明"></a>一、项目说明</h1><p>&emsp;&emsp;1.介绍<br>&emsp;&emsp;&emsp;&emsp;这个项目实现了多线程断点续传的基本原理，并且使用控件ProgressBar展示每个线程的下载情况。最后使用开源项目xUtils来实现多线程断点续传的逻辑。本文核心是了解多线程断点续传的基本原理，使之有更深的理解。<br>&emsp;&emsp;2.UI展示<br>多线程断点续传主界面<br><img src="http://ovpkl5u9l.bkt.clouddn.com/Android/Download/UI.png" alt="多线程断点续传主界面"><br>下载文件及断点时保存断点信息文件<br><img src="http://ovpkl5u9l.bkt.clouddn.com/Android/Download/%E7%BC%93%E5%AD%98.png" alt="断点信息"></p>
-<h1 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h1><p>&emsp;1.计算每个线程的下载数据<br>&emsp;&emsp;假设一个文件大小如下：<br><img src="http://ovpkl5u9l.bkt.clouddn.com/Android/Download/%E7%BA%BF%E7%A8%8B%E4%B8%8B%E8%BD%BD%E9%87%8F.png" alt="文件分段示例"><br>那么每个线程的下载数量就是：i = 10/3<br>每个线程的起始位置与结束位置就是：<br>线程0 0 ~ 2 ：0<em>i ~ (0+1)</em>i -1<br>线程1 3 ~ 5 ：1<em>i ~ (1+1)</em>i -1<br>最后一个线程需要将剩余的数据都下载完，所以结束位置应该就是文件大小：<br>线程2 6 ~ 9 ：0*i ~ length </p>
-<p>总结出线程下载公式：n<em>i ~ (n+1)</em>i-1<br>最后一条线程下载公式：n*i ~ length</p>
+<h1 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h1><p>&emsp;1.计算每个线程的下载数据<br>&emsp;&emsp;假设一个文件大小如下：<br><img src="http://ovpkl5u9l.bkt.clouddn.com/Android/Download/%E7%BA%BF%E7%A8%8B%E4%B8%8B%E8%BD%BD%E9%87%8F.png" alt="文件分段示例"></p>
+<p>那么每个线程的下载数量就是：i = 10/3<br>每个线程的起始位置与结束位置就是：<br>线程0 0 ~ 2 ：0 * i ~ (0+1) * i -1<br>线程1 3 ~ 5 ：1 * i ~ (1+1) * i -1<br>最后一个线程需要将剩余的数据都下载完，所以结束位置应该就是文件大小：<br>线程2 6 ~ 9 ：0 * i ~ length</p>
+<p>总结出线程下载公式：n * i ~ (n+1) * i - 1<br>最后一条线程下载公式：n * i ~ length</p>
 <p>&emsp;2.向服务器请求部分数据<br>&emsp;&emsp;向服务器请求部分数据需要设置一个头信息，并将请求数据的开始位置和结束位置发送给服务器。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">URL url = <span class="keyword">new</span> URL(path);</div><div class="line">HttpURLConnection conn =(HttpURLConnection) url.openConnection();</div><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> 标准写法，设置请求头，表示请求部分数据，返回的状态码 206 表示请求部分数据成功</span></div><div class="line"><span class="comment">startSize 表示服务器请求开始位置</span></div><div class="line"><span class="comment">endSize 表示服务器请求结束位置</span></div><div class="line"><span class="comment">*/</span></div><div class="line">conn.setRequestProperty(<span class="string">"Range"</span>,<span class="string">"bytes="</span>+startSize+<span class="string">"-"</span>+endSize);</div></pre></td></tr></table></figure></p>
 <h1 id="三、步骤及代码解析"><a href="#三、步骤及代码解析" class="headerlink" title="三、步骤及代码解析"></a>三、步骤及代码解析</h1><p>&emsp;1.首先计算出每个线程下载开始位置和结束位置<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment">length 文件的大小  threadId 线程的数量，这两个值都是用户输入从控件EditText中获取的</span></div><div class="line"><span class="comment">blockSize 每个线程下载的大小</span></div><div class="line"><span class="comment">*/</span></div><div class="line"><span class="keyword">int</span> blockSize = length / threadId;</div><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment">将线程的数量作为for循环结束的条件，并且每次循环都将开始位置和结束位置传递给新线程去服务器下载数据</span></div><div class="line"><span class="comment">*/</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; threadId; i++)&#123;</div><div class="line">	startSize = i * blockSize;      <span class="comment">//开始位置</span></div><div class="line">	endSize = (i + <span class="number">1</span>) * blockSize - <span class="number">1</span>;      <span class="comment">//结束位置</span></div><div class="line"></div><div class="line">	<span class="comment">//如果是最后一个线程，计算结束位置方法不同</span></div><div class="line">	<span class="keyword">if</span>(i == threadId -<span class="number">1</span>)&#123;</div><div class="line">    	endSize = length - <span class="number">1</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">//开启线程去服务器取数据</span></div><div class="line">	<span class="keyword">new</span> GetData(startSize,endSize,i).start();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>&emsp;2.提前在sd卡中申请出文件的大小<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment">getFileName()方法从网址中截取出需要下载的文件的文件名，作为保存的文件名</span></div><div class="line"><span class="comment">*/</span></div><div class="line">RandomAccessFile accessFile = <span class="keyword">new</span> RandomAccessFile(getFileName(path),<span class="string">"rw"</span>);</div><div class="line"><span class="comment">//设置该文件的大小，这样就在sd卡中申请出空间了</span></div><div class="line">accessFile.setLength(length);</div></pre></td></tr></table></figure></p>
