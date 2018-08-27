@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.4.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="Js的个人博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jsheng">
+<meta property="og:url" content="http://haojen.github.io/index.html">
+<meta property="og:site_name" content="Jsheng">
+<meta property="og:description" content="Js的个人博客">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jsheng">
+<meta name="twitter:description" content="Js的个人博客">
+
+
+
+
+
+
+  <link rel="canonical" href="http://haojen.github.io/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Jsheng</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jsheng</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home menu-item-active">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://haojen.github.io/2018/08/27/实习生/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Js">
+      <meta itemprop="description" content="Js的个人博客">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jsheng">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/27/实习生/" itemprop="url">
+                  实习生
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-08-27 17:03:15 / Modified: 17:31:21" itemprop="dateCreated datePublished" datetime="2018-08-27T17:03:15+08:00">2018-08-27</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          The article has been encrypted, please enter your password to view.<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/27/实习生/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://haojen.github.io/2018/05/14/多线程断点续传/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Js">
+      <meta itemprop="description" content="Js的个人博客">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jsheng">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/14/多线程断点续传/" itemprop="url">
+                  多线程断点续传
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-05-14 21:47:57" itemprop="dateCreated datePublished" datetime="2018-05-14T21:47:57+08:00">2018-05-14</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-05-15 14:59:59" itemprop="dateModified" datetime="2018-05-15T14:59:59+08:00">2018-05-15</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="一、项目说明"><a href="#一、项目说明" class="headerlink" title="一、项目说明"></a>一、项目说明</h1><p>&emsp;&emsp;1.介绍<br>&emsp;&emsp;&emsp;&emsp;这个项目实现了多线程断点续传的基本原理，并且使用控件ProgressBar展示每个线程的下载情况。最后使用开源项目xUtils来实现多线程断点续传的逻辑。本文核心是了解多线程断点续传的基本原理，使之有更深的理解。<br>&emsp;&emsp;2.UI展示<br>多线程断点续传主界面<br><img src="http://ovpkl5u9l.bkt.clouddn.com/Android/Download/UI.png" alt="多线程断点续传主界面"><br>下载文件及断点时保存断点信息文件<br><img src="http://ovpkl5u9l.bkt.clouddn.com/Android/Download/%E7%BC%93%E5%AD%98.png" alt="断点信息"></p>
+<h1 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h1><p>&emsp;1.计算每个线程的下载数据<br>&emsp;&emsp;假设一个文件大小如下：<br><img src="http://ovpkl5u9l.bkt.clouddn.com/Android/Download/%E7%BA%BF%E7%A8%8B%E4%B8%8B%E8%BD%BD%E9%87%8F.png" alt="文件分段示例"></p>
+<p>那么每个线程的下载数量就是：i = 10/3<br>每个线程的起始位置与结束位置就是：<br>线程0 0 ~ 2 ：0 * i ~ (0+1) * i -1<br>线程1 3 ~ 5 ：1 * i ~ (1+1) * i -1<br>最后一个线程需要将剩余的数据都下载完，所以结束位置应该就是文件大小：<br>线程2 6 ~ 9 ：0 * i ~ length</p>
+<p>总结出线程下载公式：n * i ~ (n+1) * i - 1<br>最后一条线程下载公式：n * i ~ length</p>
+<p>&emsp;2.向服务器请求部分数据<br>&emsp;&emsp;向服务器请求部分数据需要设置一个头信息，并将请求数据的开始位置和结束位置发送给服务器。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">URL url = <span class="keyword">new</span> URL(path);</div><div class="line">HttpURLConnection conn =(HttpURLConnection) url.openConnection();</div><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> 标准写法，设置请求头，表示请求部分数据，返回的状态码 206 表示请求部分数据成功</span></div><div class="line"><span class="comment">startSize 表示服务器请求开始位置</span></div><div class="line"><span class="comment">endSize 表示服务器请求结束位置</span></div><div class="line"><span class="comment">*/</span></div><div class="line">conn.setRequestProperty(<span class="string">"Range"</span>,<span class="string">"bytes="</span>+startSize+<span class="string">"-"</span>+endSize);</div></pre></td></tr></table></figure></p>
+<h1 id="三、步骤及代码解析"><a href="#三、步骤及代码解析" class="headerlink" title="三、步骤及代码解析"></a>三、步骤及代码解析</h1><p>&emsp;1.首先计算出每个线程下载开始位置和结束位置<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment">length 文件的大小  threadId 线程的数量，这两个值都是用户输入从控件EditText中获取的</span></div><div class="line"><span class="comment">blockSize 每个线程下载的大小</span></div><div class="line"><span class="comment">*/</span></div><div class="line"><span class="keyword">int</span> blockSize = length / threadId;</div><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment">将线程的数量作为for循环结束的条件，并且每次循环都将开始位置和结束位置传递给新线程去服务器下载数据</span></div><div class="line"><span class="comment">*/</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; threadId; i++)&#123;</div><div class="line">	startSize = i * blockSize;      <span class="comment">//开始位置</span></div><div class="line">	endSize = (i + <span class="number">1</span>) * blockSize - <span class="number">1</span>;      <span class="comment">//结束位置</span></div><div class="line"></div><div class="line">	<span class="comment">//如果是最后一个线程，计算结束位置方法不同</span></div><div class="line">	<span class="keyword">if</span>(i == threadId -<span class="number">1</span>)&#123;</div><div class="line">    	endSize = length - <span class="number">1</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">//开启线程去服务器取数据</span></div><div class="line">	<span class="keyword">new</span> GetData(startSize,endSize,i).start();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>&emsp;2.提前在sd卡中申请出文件的大小<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment">getFileName()方法从网址中截取出需要下载的文件的文件名，作为保存的文件名</span></div><div class="line"><span class="comment">*/</span></div><div class="line">RandomAccessFile accessFile = <span class="keyword">new</span> RandomAccessFile(getFileName(path),<span class="string">"rw"</span>);</div><div class="line"><span class="comment">//设置该文件的大小，这样就在sd卡中申请出空间了</span></div><div class="line">accessFile.setLength(length);</div></pre></td></tr></table></figure></p>
+<p>&emsp;3.去服务器下载数据<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(code == <span class="number">206</span>)&#123;</div><div class="line"></div><div class="line">    RandomAccessFile accessFile = <span class="keyword">new</span> RandomAccessFile(getFileName(path),<span class="string">"rw"</span>);</div><div class="line">    <span class="comment">//表示从文件的该位置开始读取或写入数据</span></div><div class="line">    accessFile.seek(startSize);</div><div class="line">    <span class="comment">//因为请求的是部分数据，所以这里得到的是部分数据</span></div><div class="line">    InputStream in = conn.getInputStream();</div><div class="line"></div><div class="line">    <span class="comment">//将获得的部分数据写入sd卡中</span></div><div class="line">    <span class="keyword">int</span> len = -<span class="number">1</span>;</div><div class="line">    <span class="keyword">byte</span>[] buffer = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];</div><div class="line">    <span class="keyword">int</span> total = <span class="number">0</span>;      <span class="comment">//下载的位置</span></div><div class="line">    <span class="keyword">while</span>((len = in.read(buffer)) != -<span class="number">1</span>)&#123;</div><div class="line">        accessFile.write(buffer,<span class="number">0</span>,len);</div><div class="line">        total += len;</div><div class="line">    &#125;</div><div class="line">    accessFile.close();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>&emsp;4.断点处理<br>&emsp;&emsp;断点的处理代码过于分散，所以就不贴代码了。思路就是在每次将数据写入sd卡时保存写入的位置，这样断点后就可以继续从该处继续下载和保存</p>
+<h1 id="四、完整的代码"><a href="#四、完整的代码" class="headerlink" title="四、完整的代码"></a>四、完整的代码</h1><p>&emsp;1.主界面布局文件<br>download.xml<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></div><div class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></span></div><div class="line"><span class="tag">    <span class="attr">android:orientation</span>=<span class="string">"vertical"</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">EditText</span></span></div><div class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">"@+id/et_down_path"</span></span></div><div class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></div><div class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></div><div class="line"><span class="tag">        <span class="attr">android:text</span>=<span class="string">"http://ovpkl5u9l.bkt.clouddn.com/default.jpg"</span></span></div><div class="line"><span class="tag">        <span class="attr">android:hint</span>=<span class="string">"请输入下载路径..."</span>/&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">EditText</span></span></div><div class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">"@+id/et_thread_size"</span></span></div><div class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></div><div class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></div><div class="line"><span class="tag">        <span class="attr">android:hint</span>=<span class="string">"请输入下载线程数..."</span>/&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">LinearLayout</span></span></div><div class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></span></div><div class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></div><div class="line"><span class="tag">        <span class="attr">android:orientation</span>=<span class="string">"horizontal"</span>&gt;</span></div><div class="line"></div><div class="line">        <span class="tag">&lt;<span class="name">Button</span></span></div><div class="line"><span class="tag">            <span class="attr">android:onClick</span>=<span class="string">"apiDownload"</span></span></div><div class="line"><span class="tag">            <span class="attr">android:id</span>=<span class="string">"@+id/bt_down_api"</span></span></div><div class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></span></div><div class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></div><div class="line"><span class="tag">            <span class="attr">android:text</span>=<span class="string">"api方式下载"</span>/&gt;</span></div><div class="line"></div><div class="line">        <span class="tag">&lt;<span class="name">Button</span></span></div><div class="line"><span class="tag">            <span class="attr">android:onClick</span>=<span class="string">"openSourceDownload"</span></span></div><div class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></span></div><div class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></div><div class="line"><span class="tag">            <span class="attr">android:text</span>=<span class="string">"开源方式下载"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">LinearLayout</span></span></div><div class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">"@+id/down_ll"</span></span></div><div class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></div><div class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></span></div><div class="line"><span class="tag">        <span class="attr">android:orientation</span>=<span class="string">"vertical"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>&emsp;2.ProgressBar item<br>item_progress.xml<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">ProgressBar</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">"@+id/down_progress"</span></span></div><div class="line"><span class="tag">        <span class="attr">style</span>=<span class="string">"?android:attr/progressBarStyleHorizontal"</span></span></div><div class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></div><div class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></div><div class="line"><span class="tag">        <span class="attr">android:layout_weight</span>=<span class="string">"1"</span> /&gt;</span></div></pre></td></tr></table></figure></p>
+<p>&emsp;3.Activity<br>Download.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Download</span> <span class="keyword">extends</span> <span class="title">Activity</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> ProgressBar progressBar;</div><div class="line">    <span class="keyword">private</span> EditText editPath;</div><div class="line">    <span class="keyword">private</span> EditText threadSize;</div><div class="line">    <span class="keyword">private</span> LinearLayout ll;</div><div class="line">    <span class="keyword">private</span> String path;        <span class="comment">//下载的url路径</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> threadId;       <span class="comment">//线程的数量</span></div><div class="line">    <span class="keyword">private</span> List&lt;ProgressBar&gt; pbLists;      <span class="comment">//使用集合来设置ProgressBar的最大值与当前值</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> deteleCode;         <span class="comment">//通过该参数判断文件是否下载完成，完成就删除保存断点下载位置的文件</span></div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">        <span class="keyword">super</span>.setContentView(R.layout.download);</div><div class="line"></div><div class="line">        ll = findViewById(R.id.down_ll);</div><div class="line">        editPath = findViewById(R.id.et_down_path);</div><div class="line">        threadSize = findViewById(R.id.et_thread_size);</div><div class="line">        pbLists = <span class="keyword">new</span> ArrayList&lt;ProgressBar&gt;();</div><div class="line">        path = editPath.getText().toString().trim();     <span class="comment">//下载url</span></div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">apiDownload</span><span class="params">(View v)</span></span>&#123;</div><div class="line">        threadId = Integer.parseInt(threadSize.getText().toString().trim());      <span class="comment">//线程数量</span></div><div class="line">        deteleCode = threadId;</div><div class="line">        ll.removeAllViews();        <span class="comment">//移除布局中的所有控件</span></div><div class="line">        pbLists.clear();            <span class="comment">//清楚集合中的数据</span></div><div class="line">        <span class="comment">//根据下载的线程数量动态的向布局中添加ProgressBar</span></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; threadId; i++)&#123;</div><div class="line">            ProgressBar progressBar =(ProgressBar) View.inflate(getApplicationContext(),R.layout.item_progress,<span class="keyword">null</span>);</div><div class="line">            ll.addView(progressBar);</div><div class="line">            pbLists.add(progressBar);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">//计算出每个线程的开始位置和结束位置</span></div><div class="line">        <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</div><div class="line">            <span class="keyword">int</span> startSize;      <span class="comment">//开始位置</span></div><div class="line">            <span class="keyword">int</span> endSize;        <span class="comment">//结束位置</span></div><div class="line"></div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">                <span class="keyword">try</span> &#123;</div><div class="line">                    URL url = <span class="keyword">new</span> URL(path);</div><div class="line">                    HttpURLConnection conn =(HttpURLConnection) url.openConnection();</div><div class="line">                    conn.setConnectTimeout(<span class="number">5000</span>);</div><div class="line">                    conn.setRequestMethod(<span class="string">"GET"</span>);</div><div class="line">                    <span class="keyword">int</span> code = conn.getResponseCode();</div><div class="line">                    <span class="keyword">if</span>(code == <span class="number">200</span>)&#123;</div><div class="line">                        <span class="comment">//获取文件的大小</span></div><div class="line">                        <span class="keyword">int</span> length = conn.getContentLength();</div><div class="line">                        <span class="comment">//在内存中提前申请出文件的大小</span></div><div class="line">                        RandomAccessFile accessFile = <span class="keyword">new</span> RandomAccessFile(getFileName(path),<span class="string">"rw"</span>);</div><div class="line">                        accessFile.setLength(length);</div><div class="line"></div><div class="line">                        <span class="comment">//计算出每个线程的开始位置和结束位置</span></div><div class="line">                        <span class="keyword">int</span> blockSize = length / threadId;</div><div class="line">                        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; threadId; i++)&#123;</div><div class="line">                            startSize = i * blockSize;      <span class="comment">//开始位置</span></div><div class="line">                            endSize = (i + <span class="number">1</span>) * blockSize - <span class="number">1</span>;      <span class="comment">//结束位置</span></div><div class="line"></div><div class="line">                            <span class="comment">//如果是最后一个线程，计算结束位置方法不同</span></div><div class="line">                            <span class="keyword">if</span>(i == threadId -<span class="number">1</span>)&#123;</div><div class="line">                                endSize = length - <span class="number">1</span>;</div><div class="line">                            &#125;</div><div class="line"></div><div class="line">                            <span class="comment">//开启线程去服务器取数据</span></div><div class="line">                            <span class="keyword">new</span> GetData(startSize,endSize,i).start();</div><div class="line">                        &#125;</div><div class="line">                    &#125;</div><div class="line">                &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">                    e.printStackTrace();</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;).start();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GetData</span> <span class="keyword">extends</span> <span class="title">Thread</span></span>&#123;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> startSize;      <span class="comment">//线程开始下载位置</span></div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> endSize;        <span class="comment">//线程结束下载位置</span></div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> threadSize;     <span class="comment">//是哪一个线程在下载</span></div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> pbMax;      <span class="comment">//进度条最大值</span></div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> pblastPostion;     <span class="comment">//进度条上次下载到的位置</span></div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="title">GetData</span><span class="params">()</span></span>&#123;&#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="title">GetData</span><span class="params">(<span class="keyword">int</span> startSize,<span class="keyword">int</span> endSize,<span class="keyword">int</span> threadSize)</span></span>&#123;</div><div class="line">            <span class="keyword">this</span>.startSize = startSize;</div><div class="line">            <span class="keyword">this</span>.endSize = endSize;</div><div class="line">            <span class="keyword">this</span>.threadSize = threadSize;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="meta">@Override</span></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">            <span class="keyword">try</span> &#123;</div><div class="line">                pbMax = endSize - startSize;    <span class="comment">//进度条的大小是结束位置减去开始位置，结果就是进度条的大小</span></div><div class="line">                URL url = <span class="keyword">new</span> URL(path);</div><div class="line">                HttpURLConnection conn =(HttpURLConnection) url.openConnection();</div><div class="line">                conn.setRequestMethod(<span class="string">"GET"</span>);</div><div class="line">                conn.setConnectTimeout(<span class="number">5000</span>);</div><div class="line"></div><div class="line">                <span class="comment">//打开的文件是记录断点时下载到的位置</span></div><div class="line">                File file = <span class="keyword">new</span> File(getFileName(path) + threadSize + <span class="string">".txt"</span>);</div><div class="line">                <span class="keyword">if</span>(file.exists() &amp;&amp; file.length() &gt; <span class="number">0</span>)&#123;</div><div class="line">                    FileInputStream fis = <span class="keyword">new</span> FileInputStream(file);</div><div class="line">                    BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(fis));</div><div class="line">                    <span class="comment">//读取到断点时下载的位置</span></div><div class="line">                    <span class="keyword">int</span> temp = Integer.valueOf(br.readLine());</div><div class="line">                    <span class="comment">//断点下载的位置减去线程开始下载的位置，就是断点时下载的大小也是进度条在断点恢复时显示的位置</span></div><div class="line">                    pblastPostion = temp - startSize;</div><div class="line">                    startSize = temp + <span class="number">1</span>;</div><div class="line">                    br.close();</div><div class="line">                &#125;</div><div class="line"></div><div class="line"></div><div class="line">                <span class="comment">/*</span></div><div class="line"><span class="comment">                标准写法，设置请求头，表示请求部分数据，返回的状态码 200 请求全部成功，206 表示部分成功</span></div><div class="line"><span class="comment">                startSize 表示服务器请求开始位置</span></div><div class="line"><span class="comment">                endSize 表示服务器请求结束位置</span></div><div class="line"><span class="comment">                 */</span></div><div class="line">                conn.setRequestProperty(<span class="string">"Range"</span>,<span class="string">"bytes="</span>+startSize+<span class="string">"-"</span>+endSize);</div><div class="line">                <span class="keyword">int</span> code = conn.getResponseCode();</div><div class="line">                <span class="keyword">if</span>(code == <span class="number">206</span>)&#123;</div><div class="line"></div><div class="line">                    RandomAccessFile accessFile = <span class="keyword">new</span> RandomAccessFile(getFileName(path),<span class="string">"rw"</span>);</div><div class="line">                    <span class="comment">//表示从文件的该位置开始读取或写入数据</span></div><div class="line">                    accessFile.seek(startSize);</div><div class="line">                    <span class="comment">//这里得到的是部分数据</span></div><div class="line">                    InputStream in = conn.getInputStream();</div><div class="line"></div><div class="line">                    <span class="comment">//将获得的部分数据写入硬盘中</span></div><div class="line">                    <span class="keyword">int</span> len = -<span class="number">1</span>;</div><div class="line">                    <span class="keyword">byte</span>[] buffer = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];</div><div class="line">                    <span class="keyword">int</span> total = <span class="number">0</span>;      <span class="comment">//下载的位置</span></div><div class="line">                    <span class="keyword">while</span>((len = in.read(buffer)) != -<span class="number">1</span>)&#123;</div><div class="line">                        accessFile.write(buffer,<span class="number">0</span>,len);</div><div class="line">                        total += len;</div><div class="line">                        <span class="comment">//开始位置加上下载的位置为实际上这个线程在下载文件时该文件中的真实位置</span></div><div class="line">                        <span class="keyword">int</span> current = startSize + total;</div><div class="line"></div><div class="line">                        <span class="comment">//这里是因为RandomAccessFile这个类在使用rwd模式写/读数据的时候，将数据直接写入硬盘中，而不是缓冲区中所以使用这个类</span></div><div class="line">                        RandomAccessFile bufferFile = <span class="keyword">new</span> RandomAccessFile(getFileName(path) + threadSize + <span class="string">".txt"</span>,<span class="string">"rwd"</span>);</div><div class="line">                        <span class="comment">//保存断点时线程下载到的该文件的真实位置</span></div><div class="line">                        bufferFile.write(String.valueOf(current).getBytes());</div><div class="line">                        <span class="comment">//设置进度条的最大值</span></div><div class="line">                        pbLists.get(threadSize).setMax(pbMax);</div><div class="line">                        <span class="comment">//设置进度条的当前下载的位置，断点下载的位置加上下载的位置，就是断点恢复时显示的位置</span></div><div class="line">                        pbLists.get(threadSize).setProgress(pblastPostion + total);</div><div class="line">                        bufferFile.close();</div><div class="line"></div><div class="line">                    &#125;</div><div class="line">                    accessFile.close();</div><div class="line">                    <span class="comment">//下载完成一个线程就减一，直到线程全部下载完成为0时，删除断点位置文件</span></div><div class="line">                    <span class="keyword">synchronized</span> (GetData.class)&#123;</div><div class="line">                        deteleCode = deteleCode -<span class="number">1</span>;</div><div class="line">                        <span class="keyword">if</span> (deteleCode == <span class="number">0</span>)&#123;</div><div class="line">                            <span class="comment">//threadId就是线程最大的数量，有多少个线程就有多少个线程断点位置文件</span></div><div class="line">                            <span class="keyword">while</span> (deteleCode &lt;= threadId)&#123;</div><div class="line">                                File f = <span class="keyword">new</span> File(getFileName(path) + deteleCode + <span class="string">".txt"</span>);</div><div class="line">                                f.delete();</div><div class="line">                                deteleCode++;</div><div class="line">                            &#125;</div><div class="line">                        &#125;</div><div class="line">                    &#125;</div><div class="line"></div><div class="line"></div><div class="line">                &#125;</div><div class="line">            &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">                e.printStackTrace();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//返回sd卡保存路径和URL中获得的文件名称</span></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getFileName</span><span class="params">(String path)</span></span>&#123;</div><div class="line">        <span class="keyword">int</span> i = path.lastIndexOf(<span class="string">"/"</span>);</div><div class="line">        <span class="keyword">return</span> Environment.getExternalStorageDirectory().getPath() + <span class="string">"/"</span> + path.substring(i);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="五、使用开源项目"><a href="#五、使用开源项目" class="headerlink" title="五、使用开源项目"></a>五、使用开源项目</h1><p>&emsp;&emsp;这里使用xUtils这个开源项目，<a href="https://github.com/wyouflf/xUtils" target="_blank" rel="external">下载zip包</a>解压后导入com包或jar包就可以使用了。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">openSourceDownload</span><span class="params">(View view)</span></span>&#123;</div><div class="line">        HttpUtils httpUtils = <span class="keyword">new</span> HttpUtils();</div><div class="line">        <span class="comment">/*download()方法参数解释</span></div><div class="line"><span class="comment">        1.下载的URL</span></div><div class="line"><span class="comment">        2.保存路径及文件名</span></div><div class="line"><span class="comment">        3.是否支持断点下载</span></div><div class="line"><span class="comment">        4.方法执行后的回调方法</span></div><div class="line"><span class="comment">         */</span></div><div class="line">        HttpHandler httpHandler = httpUtils.download(path, getFileName(path), <span class="keyword">true</span>, <span class="keyword">new</span> RequestCallBack&lt;File&gt;() &#123;</div><div class="line">            <span class="comment">//下载成功的回调方法</span></div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSuccess</span><span class="params">(ResponseInfo&lt;File&gt; responseInfo)</span> </span>&#123;</div><div class="line">                runOnUiThread(<span class="keyword">new</span> Runnable() &#123;</div><div class="line">                    <span class="meta">@Override</span></div><div class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">                        Toast.makeText(getApplicationContext(),<span class="string">"下载成功..."</span>,Toast.LENGTH_SHORT).show();</div><div class="line">                    &#125;</div><div class="line">                &#125;);</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="comment">//下载失败的回调方法</span></div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onFailure</span><span class="params">(HttpException e, String s)</span> </span>&#123;</div><div class="line">                runOnUiThread(<span class="keyword">new</span> Runnable() &#123;</div><div class="line">                    <span class="meta">@Override</span></div><div class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">                        Toast.makeText(getApplicationContext(),<span class="string">"下载失败..."</span>,Toast.LENGTH_SHORT).show();</div><div class="line">                    &#125;</div><div class="line">                &#125;);</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://haojen.github.io/2018/02/19/Java基础：多线程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Js">
+      <meta itemprop="description" content="Js的个人博客">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jsheng">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/19/Java基础：多线程/" itemprop="url">
+                  Java基础：多线程
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-02-19 13:13:49" itemprop="dateCreated datePublished" datetime="2018-02-19T13:13:49+08:00">2018-02-19</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-03-31 14:38:11" itemprop="dateModified" datetime="2018-03-31T14:38:11+08:00">2018-03-31</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="一、多线程概述"><a href="#一、多线程概述" class="headerlink" title="一、多线程概述"></a>一、多线程概述</h3><p>&emsp;&emsp;线程是程序执行的一条路径, 一个进程(一个正在执行的应用程序)中可以包含多条线程。多线程并发执行可以提高程序的效率, 可以同时完成多项工作。</p>
+<h3 id="二、线程生命周期"><a href="#二、线程生命周期" class="headerlink" title="二、线程生命周期"></a>二、线程生命周期</h3><p>&emsp;&emsp;线程共有5个状态，新建、就绪、运行、阻塞和死亡。线程的运行需要从CPU获得运行权，运行结束就死亡，死亡是不可逆的过程。线程在运行过程中可能会出现阻塞状态，阻塞结束会回到就绪状态重新等待CPU运行权。<br><img src="http://ovpkl5u9l.bkt.clouddn.com/Java/Java%E5%9F%BA%E7%A1%80%EF%BC%9A%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png" alt="线程的生命周期"></p>
+<h3 id="三、线程的实现方式"><a href="#三、线程的实现方式" class="headerlink" title="三、线程的实现方式"></a>三、线程的实现方式</h3><p>1.继承Thread</p>
+<ul>
+<li>继承Thread</li>
+<li>重写run()方法</li>
+<li>把需要实现的功能写在run()方法中</li>
+<li>创建线程对象</li>
+<li>调用父类的start()方法<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		MyThread mt = <span class="keyword">new</span> MyThread();</div><div class="line">		mt.start();</div><div class="line">		</div><div class="line">		<span class="keyword">while</span>(<span class="keyword">true</span>)&#123;</div><div class="line">			System.out.println(<span class="string">"主线程——————————————————"</span>);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyThread</span> <span class="keyword">extends</span> <span class="title">Thread</span></span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">while</span>(<span class="keyword">true</span>)&#123;</div><div class="line">			System.out.println(<span class="string">"线程一**********"</span>);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>2.匿名Thread实现方法<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> Thread()&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="keyword">while</span>(<span class="keyword">true</span>)&#123;</div><div class="line">			System.out.println(<span class="string">"线程二+++++++++++"</span>);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;.start();</div></pre></td></tr></table></figure></p>
+<p>3.实现Runnable接口</p>
+<ul>
+<li>实现Runnable接口</li>
+<li>重写run()方法</li>
+<li>需要执行的代码写在run()方法中</li>
+<li>新建Runnable接口子类对象</li>
+<li>传入Runnable接口子类对象新建Thread对象</li>
+<li>调用Thread的start()方法<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		MyRunnable mr = <span class="keyword">new</span> MyRunnable();</div><div class="line">		Thread t = <span class="keyword">new</span> Thread(mr);</div><div class="line">		t.start();</div><div class="line">		</div><div class="line">		<span class="keyword">while</span>(<span class="keyword">true</span>)&#123;</div><div class="line">			System.out.println(<span class="string">"主线程————————"</span>);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyRunnable</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="keyword">while</span>(<span class="keyword">true</span>)&#123;</div><div class="line">			System.out.println(<span class="string">"线程一**********"</span>);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>4.匿名Runnable实现方法<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable()&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000</span>; i++)&#123;</div><div class="line">			System.out.println(<span class="string">"匿名Runnable线程@@@@@@@"</span>);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;).start();</div></pre></td></tr></table></figure></p>
+<h3 id="四、获取当前线程对象"><a href="#四、获取当前线程对象" class="headerlink" title="四、获取当前线程对象"></a>四、获取当前线程对象</h3><p>&emsp;&emsp;在Thread中有一个静态方法currentThread()可以获取当前的线程对象，以便调用Thread的方法。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">Thread t2 = <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable()&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000</span>; i++)&#123;</div><div class="line">			<span class="comment">/*</span></div><div class="line"><span class="comment">			 * Thread.currentThread()方式是Thread的静态方法，可以获得当前线程对象。</span></div><div class="line"><span class="comment">			 * getName()方法可以获取线程的名字</span></div><div class="line"><span class="comment">			 */</span></div><div class="line">			System.out.println(Thread.currentThread().getName() + <span class="string">"...Runnable线程"</span>);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;);</div><div class="line">t2.setName(<span class="string">"setName()方法用来设置线程的名字"</span>);</div><div class="line">t2.start();</div></pre></td></tr></table></figure></p>
+<h3 id="五、守护线程"><a href="#五、守护线程" class="headerlink" title="五、守护线程"></a>五、守护线程</h3><p>&emsp;&emsp;setDaemon()方法可以设置一个线程为守护线程, 该线程不会单独执行, 当其他非守护线程执行结束后, 守护线程也跟着结束。比如在QQ里打开一个聊天窗口，这时关闭QQ主程序，该聊天窗口也会跟着关闭。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo4_setDaemon</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</div><div class="line">		<span class="comment">//匿名线程一</span></div><div class="line">		Thread t1 = <span class="keyword">new</span> Thread()&#123;</div><div class="line">			<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</div><div class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2000</span>; i++)&#123;</div><div class="line">					System.out.println(<span class="keyword">this</span>.getName() + <span class="string">"...aaaaaaaaaa"</span>);</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;;</div><div class="line">		</div><div class="line">		<span class="comment">//匿名线程二</span></div><div class="line">		Thread t2 = <span class="keyword">new</span> Thread()&#123;</div><div class="line">			<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</div><div class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++)&#123;</div><div class="line">					System.out.println(<span class="keyword">this</span>.getName() + <span class="string">"...bbbb"</span>);</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;;</div><div class="line">		</div><div class="line">		t1.setDaemon(<span class="keyword">true</span>);			<span class="comment">//设置为t1为守护线程，t1结束时，t2不管有没有执行完毕都会结束</span></div><div class="line">		t1.start();</div><div class="line">		t2.start();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="六、线程同步"><a href="#六、线程同步" class="headerlink" title="六、线程同步"></a>六、线程同步</h3><p>&emsp;&emsp;在线程执行的时候，CPU可能会切换到其它线程执行，这时第一个线程还有没有处理完的工作，可能会造成程序错误。如果需要保证线程执行完才退出，就需要使用到线程同步，线程同步有两种方法，同步代码块和同步方法。<br>1.同步代码块<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment">* 同步代码块需要用关键字 synchronized 并且需要传入一个锁对象，锁对象任意一个类的对象都可以，但是一般用Object</span></div><div class="line"><span class="comment">* 需要同步的代码必须用同一个锁对象，所以匿名对象不可以作为锁对象</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">synchronized</span>(obj)&#123;</div><div class="line">	System.out.print(<span class="string">"落"</span>);</div><div class="line">	System.out.print(<span class="string">"霞"</span>);</div><div class="line">	System.out.print(<span class="string">"与"</span>);</div><div class="line">	System.out.print(<span class="string">"孤"</span>);</div><div class="line">	System.out.print(<span class="string">"鹜"</span>);</div><div class="line">	System.out.print(<span class="string">"齐"</span>);</div><div class="line">	System.out.print(<span class="string">"飞"</span>);</div><div class="line">	System.out.print(<span class="string">"\r\n"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>2.同步方法<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> * 同步方法： 在定义方法时加入关键字 synchronized，写同步方法时不需要写锁对象，会自动传入一个锁对象</span></div><div class="line"><span class="comment"> * 	1.静态方法：静态方法的锁对象是当前类的字节码文件，类名.class，它是唯一的。</span></div><div class="line"><span class="comment"> * 	2.非静态方法：非静态方法的锁对象是this（调用当前方法的对象）</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">print3</span><span class="params">()</span></span>&#123;</div><div class="line">	System.out.println(<span class="string">"同步方法！！"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://haojen.github.io/2018/02/16/Windows共享ssr网络到Android/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Js">
+      <meta itemprop="description" content="Js的个人博客">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jsheng">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/16/Windows共享ssr网络到Android/" itemprop="url">
+                  Windows共享ssr网络到Android
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-02-16 12:09:55" itemprop="dateCreated datePublished" datetime="2018-02-16T12:09:55+08:00">2018-02-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-02-23 23:01:33" itemprop="dateModified" datetime="2018-02-23T23:01:33+08:00">2018-02-23</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>&emsp;&emsp;在刷入类原生Android系统时，需要验证Google账号。这时就可以通过电脑共享网络给手机使用，前提是电脑能使用ssr翻墙。</p>
+<h3 id="一-电脑端"><a href="#一-电脑端" class="headerlink" title="一.电脑端"></a>一.电脑端</h3><p>&emsp;&emsp;右击ssr图标选择“选项设置”<br><img src="http://ovpkl5u9l.bkt.clouddn.com/Windows%E5%85%B1%E4%BA%AB%E7%BD%91%E7%BB%9C/%E9%80%89%E9%A1%B9.png" alt="选项设置"><br>&emsp;&emsp;选中“来自局域网的连接”，端口保持不变<br><img src="http://ovpkl5u9l.bkt.clouddn.com/Windows%E5%85%B1%E4%BA%AB%E7%BD%91%E7%BB%9C/%E5%8B%BE%E9%80%89.png" alt="勾选"><br>&emsp;&emsp;win+R输入cmd，在cmd里输入ipconfig查看本地ip记住这个ip。我这里是连接wifi所以我这里是无线局域网的ipv4地址<br><img src="http://ovpkl5u9l.bkt.clouddn.com/Windows%E5%85%B1%E4%BA%AB%E7%BD%91%E7%BB%9C/ipconfig.png" alt="ipconfig"><br>电脑端操作就完成了，接下来是手机端</p>
+<h3 id="二-手机端"><a href="#二-手机端" class="headerlink" title="二.手机端"></a>二.手机端</h3><p>&emsp;&emsp;连接与电脑端相同的网络，在高级选项-代理里选择手动，然后填入ip和端口<br><img src="http://ovpkl5u9l.bkt.clouddn.com/Windows%E5%85%B1%E4%BA%AB%E7%BD%91%E7%BB%9C/%E6%89%8B%E5%8A%A8.jpg" alt="手动"><br><img src="http://ovpkl5u9l.bkt.clouddn.com/Windows%E5%85%B1%E4%BA%AB%E7%BD%91%E7%BB%9C/%E5%A1%AB%E5%85%A5.jpg" alt="填入"><br>到这里手机就可以通过Windows共享的网络翻墙了。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://haojen.github.io/2018/02/08/Java基础：io流/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Js">
+      <meta itemprop="description" content="Js的个人博客">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jsheng">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/08/Java基础：io流/" itemprop="url">
+                  Java基础：io流
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-02-08 17:59:04 / Modified: 20:53:26" itemprop="dateCreated datePublished" datetime="2018-02-08T17:59:04+08:00">2018-02-08</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="一、io流概述"><a href="#一、io流概述" class="headerlink" title="一、io流概述"></a>一、io流概述</h3><p>&emsp;&emsp;Java中对数据操作都是用流来表示，用于操作流的类都存放在java.io包中。io流分为字节流和字符流两种，字节流可以操作任务文件，字符流只可以操作纯文本文件。io流的流向可以分为输入流和输出流，输入流用于向程序输入数据，输出流用于向文件输出数据。</p>
+<h3 id="二、字节流"><a href="#二、字节流" class="headerlink" title="二、字节流"></a>二、字节流</h3><p>&emsp;&emsp;字节流的抽象父类：InputStream和OutputStream，字节流都派生与这两个抽象类。InputStream是输入流，OutputStream是输出流。<br>类结构<br><img src="http://ovpkl5u9l.bkt.clouddn.com/Java/Java%E5%9F%BA%E7%A1%80%EF%BC%9Aio%E6%B5%81/io%E6%B5%81%E5%B1%82%E7%BA%A7%E7%BB%93%E6%9E%84.jpg" alt="io流层级结构"></p>
+<p>1、常用子类</p>
+<ul>
+<li>FileInputStream - FileOutputStream<br>&emsp;&emsp;重写了父类方法，提供文件的读写功能。</li>
+<li>BufferedInputStream - BufferedOutputStream<br>&emsp;&emsp;带有缓冲区的子类，能提高文件读写效率。</li>
+</ul>
+<p>2、案例</p>
+<ul>
+<li><p>拷贝文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> * 拷贝文件</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo5</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException</span>&#123;</div><div class="line">		<span class="comment">/*</span></div><div class="line"><span class="comment">		 * 构造函数传入一个File对象或者String对象。</span></div><div class="line"><span class="comment">		 */</span></div><div class="line">		FileInputStream fis = <span class="keyword">new</span> FileInputStream(<span class="string">"io\\a.txt"</span>);</div><div class="line">		FileOutputStream fos = <span class="keyword">new</span> FileOutputStream(<span class="string">"io\\copy.txt"</span>);</div><div class="line">		</div><div class="line">		<span class="keyword">int</span> len = <span class="number">0</span>;</div><div class="line">		<span class="comment">/*</span></div><div class="line"><span class="comment">		 * fis.read()可以读取一个字节数据并转成int型，文件结束返回-1</span></div><div class="line"><span class="comment">		 * fos.write(len)会将读取到的数据写入到文件copy.txt里。</span></div><div class="line"><span class="comment">		 */</span></div><div class="line">		<span class="keyword">while</span>((len = fis.read()) != -<span class="number">1</span>)&#123;</div><div class="line">			fos.write(len);</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		<span class="comment">/*</span></div><div class="line"><span class="comment">		 * 关闭流对象，可以节省内存</span></div><div class="line"><span class="comment">		 */</span></div><div class="line">		fis.close();</div><div class="line">		fos.close();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用带缓冲区的字节流拷贝文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">FileInputStream fis = <span class="keyword">new</span> FileInputStream(<span class="string">"io\\a.txt"</span>);</div><div class="line">FileOutputStream fos = <span class="keyword">new</span> FileOutputStream(<span class="string">"io\\b.txt"</span>);</div><div class="line">		</div><div class="line">BufferedInputStream bis = <span class="keyword">new</span> BufferedInputStream(fis);</div><div class="line">BufferedOutputStream bos = <span class="keyword">new</span> BufferedOutputStream(fos);</div><div class="line">		</div><div class="line"><span class="keyword">int</span> len;</div><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> * bis.read()可以将缓冲区装满后再写入文件中</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">while</span>((len = bis.read()) != -<span class="number">1</span>)&#123;</div><div class="line">	bos.write(len);</div><div class="line">&#125;</div><div class="line">		</div><div class="line">bis.close();</div><div class="line">bos.close();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="三、字符流"><a href="#三、字符流" class="headerlink" title="三、字符流"></a>三、字符流</h3><p>&emsp;&emsp;字符流是针对纯文本进行操作的类。Reader和Writer是字符流顶级抽象父类，Reader用于读，Writer用于写。</p>
+<p>1、常用子类</p>
+<ul>
+<li>FileReader - FileWriter<br>&emsp;&emsp;字符流本质就是字节流加上编码集，该类在使用时会默认使用平台字符集对数据进行加工。</li>
+<li>BufferedReader - BufferedWriter<br>&emsp;&emsp;对FileReader进行包装，加上缓冲区。</li>
+<li>InputStreamReader - OutputStreamWriter<br>&emsp;&emsp;可以指定编码集进行加工。</li>
+</ul>
+<p>2、案例</p>
+<ul>
+<li><p>字符流复制文本文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">FileReader fr = <span class="keyword">new</span> FileReader(<span class="string">"io\\a.txt"</span>);</div><div class="line">FileWriter fw = <span class="keyword">new</span> FileWriter(<span class="string">"io\\b.txt"</span>);</div><div class="line">		</div><div class="line"><span class="keyword">int</span> ch;</div><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> * 字符流可以自动区分符号、数字、字母、中文，不会出现乱码现象</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">while</span>((ch = fr.read()) != -<span class="number">1</span>)&#123;</div><div class="line">	fw.write(ch);</div><div class="line">&#125;</div><div class="line">		</div><div class="line">fr.close();</div><div class="line">fw.close();</div></pre></td></tr></table></figure>
+</li>
+<li><p>带缓冲区字符流复制文件，在只拷贝的情况下，字节流拷贝文本文件比字符流快一点。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">FileReader fr = <span class="keyword">new</span> FileReader(<span class="string">"io\\a.txt"</span>);</div><div class="line">FileWriter fw = <span class="keyword">new</span> FileWriter(<span class="string">"io\\c.txt"</span>);</div><div class="line">		</div><div class="line">BufferedReader br = <span class="keyword">new</span> BufferedReader(fr);	<span class="comment">//装饰者模式</span></div><div class="line">BufferedWriter bw = <span class="keyword">new</span> BufferedWriter(fw);</div><div class="line">		</div><div class="line">String s;</div><div class="line"><span class="keyword">while</span>((s = br.readLine()) != <span class="keyword">null</span>)&#123;		<span class="comment">//readLine()读取一行,文件结束返回null</span></div><div class="line">	bw.write(s);</div><div class="line">	bw.newLine();						<span class="comment">//跨平台的换行</span></div><div class="line">&#125;</div><div class="line">		</div><div class="line">br.close();</div><div class="line">bw.close();</div></pre></td></tr></table></figure>
+</li>
+<li><p>自定义编码集复制文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> * 在构造时写入想要使用的编码集名字，就可以使用对应编码集，在读入的时候文件编码集是什么就要写成什么，不然会乱码</span></div><div class="line"><span class="comment"> * 在这里qq.txt的编码集是UTF-16所以我使用UTF-16</span></div><div class="line"><span class="comment"> * 使用这种方式字节流与字符流进行了转换</span></div><div class="line"><span class="comment">*/</span></div><div class="line">InputStreamReader isr = <span class="keyword">new</span> InputStreamReader(<span class="keyword">new</span> FileInputStream(<span class="string">"io\\qq.txt"</span>),<span class="string">"UTF-16"</span>);</div><div class="line">OutputStreamWriter osw = <span class="keyword">new</span> OutputStreamWriter(<span class="keyword">new</span> FileOutputStream(<span class="string">"io\\qqq.txt"</span>),<span class="string">"GBK"</span>);</div><div class="line">		</div><div class="line"><span class="keyword">int</span> ch;</div><div class="line"><span class="keyword">while</span>((ch = isr.read()) != -<span class="number">1</span>)&#123;</div><div class="line">	osw.write(ch);</div><div class="line">&#125;</div><div class="line">		</div><div class="line">isr.close();</div><div class="line">osw.close();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="四、其它"><a href="#四、其它" class="headerlink" title="四、其它"></a>四、其它</h3><ul>
+<li>flush()与close()区别<br>&emsp;&emsp;flush()方法用来刷新缓冲区，使缓冲区中内容写入到文件中，刷新后流还可以继续写。close()方法用来关闭流，但关闭流之前会刷新一次缓冲区，刷新后流不能继续写入。</li>
+<li>io流的异常处理<br>&emsp;&emsp;jdk1.6及以前处理方式<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">FileInputStream fis = <span class="keyword">null</span>;</div><div class="line">FileOutputStream fos = <span class="keyword">null</span>;</div><div class="line"><span class="keyword">try</span> &#123;</div><div class="line">	fis = <span class="keyword">new</span> FileInputStream(<span class="string">"aaa.txt"</span>);</div><div class="line">	fos = <span class="keyword">new</span> FileOutputStream(<span class="string">"bbb.txt"</span>);</div><div class="line">	<span class="keyword">int</span> b;</div><div class="line">	<span class="keyword">while</span>((b = fis.read()) != -<span class="number">1</span>) &#123;</div><div class="line">		fos.write(b);</div><div class="line">	&#125;</div><div class="line">&#125; <span class="keyword">finally</span> &#123;</div><div class="line">	<span class="comment">/*</span></div><div class="line"><span class="comment">	 * 再加一层try&#123;&#125;的原因是保证就算一个流出现异常，另一个流也能关闭</span></div><div class="line"><span class="comment">	*/</span></div><div class="line">	<span class="keyword">try</span> &#123;</div><div class="line">		<span class="keyword">if</span>(fis != <span class="keyword">null</span>)</div><div class="line">		fis.close();</div><div class="line">	&#125;<span class="keyword">finally</span> &#123;</div><div class="line">		<span class="keyword">if</span>(fos != <span class="keyword">null</span>)</div><div class="line">			fos.close();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>&emsp;&emsp;jdk1.7以后处理方式<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> *这个版本会自动关闭在括号中创建的流对象</span></div><div class="line"><span class="comment">*/</span></div><div class="line"><span class="keyword">try</span>(</div><div class="line">	FileInputStream fis = <span class="keyword">new</span> FileInputStream(<span class="string">"aaa.txt"</span>);</div><div class="line">	FileOutputStream fos = <span class="keyword">new</span> FileOutputStream(<span class="string">"bbb.txt"</span>);</div><div class="line">)&#123;</div><div class="line">	<span class="keyword">int</span> b;</div><div class="line">	<span class="keyword">while</span>((b = fis.read()) != -<span class="number">1</span>) &#123;</div><div class="line">		fos.write(b);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://haojen.github.io/2018/02/03/Struts2数据封装/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Js">
+      <meta itemprop="description" content="Js的个人博客">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jsheng">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/03/Struts2数据封装/" itemprop="url">
+                  Struts2数据封装
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-02-03 17:17:48" itemprop="dateCreated datePublished" datetime="2018-02-03T17:17:48+08:00">2018-02-03</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-02-23 23:01:54" itemprop="dateModified" datetime="2018-02-23T23:01:54+08:00">2018-02-23</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>&emsp;&emsp;Struts2给我们提供了一些用于获取页面参数的拦截器，共分为静态参数封装和动态属性封装。</p>
+<h2 id="一、静态参数封装"><a href="#一、静态参数封装" class="headerlink" title="一、静态参数封装"></a>一、静态参数封装</h2><p>&emsp;&emsp;这种方式直接通过struts.xml将需要的参数传递到Action中，参数固定，不可修改。<br>struts.xml<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 将 name 和 age 的参数写在了 &lt;param&gt;标签中 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">action</span> <span class="attr">name</span>=<span class="string">"addUser"</span> <span class="attr">class</span>=<span class="string">"top.jiangchina.action.User"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">param</span> <span class="attr">name</span>=<span class="string">"name"</span>&gt;</span>tang<span class="tag">&lt;/<span class="name">param</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">param</span> <span class="attr">name</span>=<span class="string">"age"</span>&gt;</span>33<span class="tag">&lt;/<span class="name">param</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">action</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>action.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> <span class="keyword">extends</span> <span class="title">ActionSupport</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> String name;	<span class="comment">//需要接收的参数</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> age;</div><div class="line">	</div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">execute</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">		System.out.println(name + <span class="string">","</span> + age); <span class="comment">//测试是否获取成功</span></div><div class="line">		<span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> name;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.name = name;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> age;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.age = age;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="二、动态属性封装"><a href="#二、动态属性封装" class="headerlink" title="二、动态属性封装"></a>二、动态属性封装</h2><p>&emsp;&emsp;动态属性封装分为三种方式，可以通过页面填入参数。</p>
+<h3 id="2-1-在Action中定义需要参数变量通过表单传递"><a href="#2-1-在Action中定义需要参数变量通过表单传递" class="headerlink" title="2.1.在Action中定义需要参数变量通过表单传递"></a>2.1.在Action中定义需要参数变量通过表单传递</h3><p>User类<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> String name;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> age;</div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> name;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.name = name;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> age;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.age = age;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>表单<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"$&#123;pageContext.request.contextPath&#125;/User1"</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></div><div class="line">	用户名：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"name"</span>/&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">	年龄： <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"age"</span>/&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"提交"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>struts.xml<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">action</span> <span class="attr">name</span>=<span class="string">"User1"</span> <span class="attr">class</span>=<span class="string">"top.jiangchina.action.User1"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">action</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>Action<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User1</span> <span class="keyword">extends</span> <span class="title">ActionSupport</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> String name;	<span class="comment">//变量名需要与表单中name属性一致</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> age;</div><div class="line">	</div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">execute</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">		System.out.println(name + <span class="string">","</span> + age);</div><div class="line">		<span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> name;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.name = name;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> age;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.age = age;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="2-2-在Action中定义一个对象，通过对象获取参数"><a href="#2-2-在Action中定义一个对象，通过对象获取参数" class="headerlink" title="2.2.在Action中定义一个对象，通过对象获取参数"></a>2.2.在Action中定义一个对象，通过对象获取参数</h3><p>表单<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"$&#123;pageContext.request.contextPath&#125;/User2"</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></div><div class="line">	用户名：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"user.name"</span>/&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span>	//这里是Action中User变量</div><div class="line">	年龄： <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"user.age"</span>/&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"提交"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>struts.xml<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">action</span> <span class="attr">name</span>=<span class="string">"User2"</span> <span class="attr">class</span>=<span class="string">"top.jiangchina.action.User2"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">action</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>Action<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User2</span> <span class="keyword">extends</span> <span class="title">ActionSupport</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> User user;</div><div class="line">	</div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">execute</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">		System.out.println(user.getName() + <span class="string">","</span> + user.getAge());</div><div class="line">		<span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> User <span class="title">getUser</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> user;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUser</span><span class="params">(User user)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.user = user;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="2-3-模型驱动需要实现ModelDriven接口，这也是最常用方式"><a href="#2-3-模型驱动需要实现ModelDriven接口，这也是最常用方式" class="headerlink" title="2.3.模型驱动需要实现ModelDriven接口，这也是最常用方式"></a>2.3.模型驱动需要实现ModelDriven接口，这也是最常用方式</h3><p>表单<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"$&#123;pageContext.request.contextPath&#125;/User3"</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></div><div class="line">	用户名：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"name"</span>/&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">	年龄： <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"age"</span>/&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"提交"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>struts.xml<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">action</span> <span class="attr">name</span>=<span class="string">"User3"</span> <span class="attr">class</span>=<span class="string">"top.jiangchina.action.User3"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">action</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>Action<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User3</span> <span class="keyword">extends</span> <span class="title">ActionSupport</span> <span class="keyword">implements</span> <span class="title">ModelDriven</span>&lt;<span class="title">User</span>&gt;</span>&#123;</div><div class="line">	<span class="keyword">private</span> User user = <span class="keyword">new</span> User();		<span class="comment">//使用模型驱动需要自己new一个user对象</span></div><div class="line">	</div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">execute</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">		System.out.println(user.getName() + <span class="string">","</span> + user.getAge());</div><div class="line">		<span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> User <span class="title">getUser</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> user;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUser</span><span class="params">(User user)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.user = user;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> User <span class="title">getModel</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> user;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这种方式在编写表单和Action的代码都比较清晰。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://haojen.github.io/2017/11/27/Hibernate下载使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Js">
+      <meta itemprop="description" content="Js的个人博客">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jsheng">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/27/Hibernate下载使用/" itemprop="url">
+                  Hibernate下载使用
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2017-11-27 20:06:57 / Modified: 21:58:07" itemprop="dateCreated datePublished" datetime="2017-11-27T20:06:57+08:00">2017-11-27</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="一、Hibernate介绍"><a href="#一、Hibernate介绍" class="headerlink" title="一、Hibernate介绍"></a>一、Hibernate介绍</h1><p>&emsp;&emsp;Hibernate是一个开源的ORM框架，对JDBC进行了轻量级封装。使开发人员可以使用面向对象的编程思想来进行持久层的开发，操作数据库，还可以使用Hibernate提供的HQL（Hibernate Query Languag）直接从数据库中获得Java对象。</p>
+<h1 id="二、Hibernate的下载"><a href="#二、Hibernate的下载" class="headerlink" title="二、Hibernate的下载"></a>二、Hibernate的下载</h1><p>&emsp;&emsp;<a href="http://hibernate.org/orm/releases/5.2/" target="_blank" rel="external">Hibernate5.2的下载地址</a></p>
+<h1 id="三、导入Eclipse项目"><a href="#三、导入Eclipse项目" class="headerlink" title="三、导入Eclipse项目"></a>三、导入Eclipse项目</h1><p>&emsp;&emsp;将下载的Hibernate解压后进入<strong>lib\required</strong>文件夹下，复制所有的jar包到Eclipse中JavaWeb项目的<strong>WebContent/WEB-INF/lib</strong>下。<br>&emsp;&emsp;所需jar包:<br><img src="http://ovpkl5u9l.bkt.clouddn.com/Hibernate/Hibernate%E7%9A%84jar%E5%8C%85.jpg" alt="Hibernate的jar包"><br>&emsp;&emsp;项目结构:<br><img src="http://ovpkl5u9l.bkt.clouddn.com/Hibernate/Hibernate%E5%AF%BC%E5%85%A5jar%E5%8C%85%E5%90%8E%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84.jpg" alt="Hibernate导入后项目结构"><br>图中mysql-connector-java-5.1.44-bin.jar包是MySQL JDBC驱动，在使用Hibernate时也还是需要导入此包。</p>
+<h1 id="四、Hibernate-Tools"><a href="#四、Hibernate-Tools" class="headerlink" title="四、Hibernate Tools"></a>四、Hibernate Tools</h1><p>&emsp;&emsp;Hibernate Tools是一个Hibernate的插件，使用插件可以方便我们生成hibernate.cfg.xml文件，该文件用来配置数据库的连接，以及Hibernate运行时的属性值。下面介绍通过Eclipse在线安装Hibernate Tools。</p>
+<ol>
+<li>在Eclipse菜单栏中点击“Help-Install New Software”选项，弹出“Install”对话框。<br><img src="http://ovpkl5u9l.bkt.clouddn.com/Hibernate/Install.jpg" alt="Install"></li>
+<li>点击Add按钮,在弹出对话框“Name”处输入“JBosstool”，在“Location”中输入”<a href="http://download.jboss.org/jbosstools/mars/stable/updates/" target="_blank" rel="external">http://download.jboss.org/jbosstools/mars/stable/updates/</a> “。单击”OK”<br><img src="http://ovpkl5u9l.bkt.clouddn.com/Hibernate/url.jpg" alt="url"></li>
+<li>在列表中选择“Hibernate Tools”，单击“next”开始安装。<br><img src="http://ovpkl5u9l.bkt.clouddn.com/Hibernate/tools.jpg" alt="tools"></li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://haojen.github.io/2017/10/17/struts基础使用方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Js">
+      <meta itemprop="description" content="Js的个人博客">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jsheng">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/17/struts基础使用方法/" itemprop="url">
+                  struts基础使用方法
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2017-10-17 19:50:19" itemprop="dateCreated datePublished" datetime="2017-10-17T19:50:19+08:00">2017-10-17</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-02-23 23:02:15" itemprop="dateModified" datetime="2018-02-23T23:02:15+08:00">2018-02-23</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="一-struts2说明"><a href="#一-struts2说明" class="headerlink" title="一. struts2说明"></a>一. struts2说明</h3><p>&emsp;&emsp;<strong>MVC(Model View Controller, 模型 - 视图 - 控制器)</strong>框架将应用系统的输入、处理、输出, 按照Model、View、Controller三部分进行分离，划分成模型层、视图层、控制层。三层之间以最少的耦合来协同工作，从而提高了应用系统的可扩展性和可维护性。而struts2就是一个基于MVC设计的框架。</p>
+<h3 id="二-项目说明"><a href="#二-项目说明" class="headerlink" title="二. 项目说明"></a>二. 项目说明</h3><p>&emsp;&emsp;从开始界面点击链接跳转到另一个页面并显示“Hello World！！！”<br><strong>项目结构:</strong><br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/project.jpg" alt="文件结构"></p>
+<p><strong>显示页面</strong><br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/index结果.jpg" alt="index"></p>
+<hr>
+<p><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/success结果.jpg" alt="success"></p>
+<h3 id="三-struts2-5版本使用到的基础jar包"><a href="#三-struts2-5版本使用到的基础jar包" class="headerlink" title="三. struts2.5版本使用到的基础jar包"></a>三. struts2.5版本使用到的基础jar包</h3><p>&emsp;&emsp;jar包存放在struts安装目录\lib下, 使用之前需要先将这些jar包导入到项目, 如果是动态web项目一般将jar包放在<strong>WebContent/WEB-INF/lib</strong>下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">asm-5.2.jar</div><div class="line">asm-commons-5.2.jar</div><div class="line">asm-tree-5.2.jar</div><div class="line">commons-fileupload-1.3.3.jar</div><div class="line">commons-io-2.5.jar</div><div class="line">commons-lang-2.4.jar</div><div class="line">commons-lang3-3.6.jar</div><div class="line">freemarker-2.3.23.jar</div><div class="line">javassist-3.20.0-GA.jar</div><div class="line">log4j-api-2.8.2.jar</div><div class="line">ognl-3.1.15.jar</div><div class="line">struts2-core-2.5.13.jar</div></pre></td></tr></table></figure></p>
+<h3 id="四-需要配置的文件"><a href="#四-需要配置的文件" class="headerlink" title="四. 需要配置的文件"></a>四. 需要配置的文件</h3><ol>
+<li>web.xml&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;配置Filter及Web页面列表</li>
+<li>struts.xml&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;配置Action和对应请求关系</li>
+<li>struts.properties&emsp;&emsp;&emsp;配置Web页面默认编码格式</li>
+<li>index.jsp&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;链接所在页面</li>
+<li>success.jsp&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;跳转页面</li>
+<li>HelloAction.java&emsp;&emsp;&emsp;&ensp;Action处理程序     </li>
+</ol>
+<h3 id="五-文件详细解释"><a href="#五-文件详细解释" class="headerlink" title="五. 文件详细解释"></a>五. 文件详细解释</h3><p><strong>web.xml文件</strong><br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/web.jpg" alt="web.xml"><br>7行:<br><code>&lt;filter-name&gt;Struts2&lt;/filter-name&gt;</code><br>过滤器名字</p>
+<p>8行:<br><code>&lt;filter-class&gt;org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter&lt;/filter-class&gt;</code><br>指定过滤器,不同版本的struts2路径会不一样</p>
+<p>12行:<br><code>&lt;url-pattern&gt;/*&lt;/url-pattern&gt;</code><br>设置需要过滤的请求网址格式, /*表示过滤所有请求</p>
+<p>15行:<br><code>&lt;welcome-file&gt;index.jsp&lt;/welcome-file&gt;</code><br>Web程序的第一个页面, 可以有多个页面, 先找到哪个页面就使用这个页面作为首页</p>
+<p><strong>struts.xml文件</strong><br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/struts.jpg" alt="struts.xml"><br>6行:<br><code>&lt;package name=&quot;default&quot; namespace=&quot;/&quot; extends=&quot;struts-default&quot;&gt;</code><br>package标签设置包的相关属性<br>name:包名&emsp;&emsp;&emsp;namespace:设置包的命名空间&emsp;&emsp;&emsp;extends:继承自哪一个包</p>
+<p>7行:<br><code>&lt;action name=&quot;hello&quot; class=&quot;com.action.HelloAction&quot;&gt;</code><br>name:从index页面传来的请求Action名称&emsp;&emsp;&emsp;class:Action处理类路径</p>
+<p>8行:<br><code>&lt;result&gt;success.jsp&lt;/result&gt;</code><br>设置从Action返回到那个页面进行显示</p>
+<p><strong>struts.properties文件</strong><br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/strutsproperties.jpg" alt="struts.properties"><br><code>&lt;struts.il8n.encoding value=&quot;UTF-8&quot;/&gt;</code><br>1行:<br>设置struts的编码, 防止中文乱码</p>
+<p><strong>index.jsp文件</strong><br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/index.jpg" alt="index.jsp"><br>12行:<br><code>&lt;s:a action=&quot;hello&quot;&gt;hello&lt;/s:a&gt;</code><br>设置名为hello的超链接, action属性的值是action的名字, 对应struts.xml文件中第七行. <code>&lt;s:a&gt;</code>标签是struts2提供的标签使用前需要先引入标签<code>&lt;%@ taglib uri=&quot;/struts-tags&quot; prefix=&quot;s&quot;%&gt;</code>(第3行)</p>
+<p><strong>success.jsp文件</strong><br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/success.jpg" alt="success.jsp"><br>12行:<br><code>&lt;s:property value=&quot;helo&quot;/&gt;</code><br>获取Action栈顶对象的helo属性值并显示在页面上</p>
+<p><strong>HelloAction.java文件</strong><br><img src="http://ovpkl5u9l.bkt.clouddn.com/struts2/Hello/HelloAction.jpg" alt="HelloAction.java"><br>这个类继承了Actionsupport类,该类提供了很多实用的方法, execute()就是Actionsupport提供的其中一个方法, 如果没有定义method属性(struts.xml文件中的<code>&lt;action&gt;</code>标签属性, 该属性可以指定Action访问的方法名), 那么会默认调用该方法, 方法返回一个Actionsupport中的常量SUCCESS.</p>
+<h3 id="六、执行过程"><a href="#六、执行过程" class="headerlink" title="六、执行过程"></a>六、执行过程</h3><p>&emsp;从index页面点击超链接，web.xml中的Struts2过滤器会拦截该请求。到struts.xml中匹配相应action，转到对应处理类中，处理完返回一个String类型变量到struts.xml中匹配对于页面显示结果。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Js</p>
+              <p class="site-description motion-element" itemprop="description">Js的个人博客</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">tags</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Js</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.3.8</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Gemini</a> v6.4.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.0"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
